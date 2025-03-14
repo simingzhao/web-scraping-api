@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "regions": ["iad1"],
+  "functions": {
+    "api/scrape/**": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=86400"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true"
+  },
+  "build": {
+    "env": {
+      "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true"
+    }
+  },
+  "github": {
+    "silent": true,
+    "autoAlias": true
+  }
+} 

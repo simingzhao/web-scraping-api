@@ -76,8 +76,8 @@ export default function DocsPage() {
               <pre className="code-block mb-4">
 {`// Include your API key in the request headers
 const headers = {
-  'Content-Type': 'application/json',
-  'X-API-Key': 'your-api-key'
+  &apos;Content-Type&apos;: &apos;application/json&apos;,
+  &apos;X-API-Key&apos;: &apos;your-api-key&apos;
 };`}
               </pre>
               <p>
@@ -245,7 +245,7 @@ const headers = {
   "codeBlocks": [
     {
       "language": "javascript",
-      "code": "const example = 'Hello World';"
+      "code": "const example = &apos;Hello World&apos;;"
     }
   ],
   "headings": [
@@ -308,7 +308,7 @@ const headers = {
               </p>
               <ul className="list-disc pl-5">
                 <li><code>timeout</code> (number): Maximum time in milliseconds to wait for the page to load (default: 30000)</li>
-                <li><code>waitUntil</code> (string): When to consider navigation successful (options: 'load', 'domcontentloaded', 'networkidle0', 'networkidle2')</li>
+                <li><code>waitUntil</code> (string): When to consider navigation successful (options: &apos;load&apos;, &apos;domcontentloaded&apos;, &apos;networkidle0&apos;, &apos;networkidle2&apos;)</li>
                 <li><code>userAgent</code> (string): Custom user agent string</li>
                 <li><code>proxy</code> (string): Proxy server to use for the request</li>
                 <li><code>cookies</code> (array): Cookies to set for the request</li>
